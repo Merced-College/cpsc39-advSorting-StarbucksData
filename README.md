@@ -1,65 +1,72 @@
-# Start here: Caffeine Quest student project
+# Caffeine Quest: Getting Started
 
-1. Extract the ZIP. In Eclipse select **File > Import > General > Existing Projects into Workspace**.
-2. Choose the extracted **CaffeineQuestStudent** folder. Import the project of that name.
-   It is separate from the instructor project, CaffeineQuest.
-3. Use an installed **JDK 11 or newer**. No Maven or extra Java libraries are required.
-4. Expand **src > caffeinequest**, right-click **CaffeineQuest.java**, and choose
-   **Run As > Java Application**.
-5. Click inside the Console. Press Enter for mode **1 (Demo)** and each default.
-   This uses approximate central Merced coordinates and displays the closest ten stores.
-   Press Enter at the final repeat prompt to finish.
-6. Right-click **MapPreviewServer.java > Run As > Java Application**. Keep it running.
-7. Open **http://localhost:8080/demo-map.html** in your normal web browser.
-   Use this address, rather than double-clicking the HTML file. The map needs internet.
-8. Read **ASSIGNMENT.md**. Complete TODO A-D in **MergeSort.java**.
-9. Run **SortCheck.java > Run As > Java Application** to check your implementation.
-10. Run CaffeineQuest again and choose **2 (Student)**. Once it completes, open
-    **http://localhost:8080/student-map.html**. The two modes save separate map files.
+## 1. Create your own GitHub repository
 
-Each map displays its sorting mode so you can identify your evidence. Demo works
-before the TODOs are done. Student mode deliberately reports an unfinished merge
-and does not export a Student map until you implement it. SortCheck initially
-reports failures; this is expected. Never copy the Demo sort into MergeSort.
+1. Sign in to GitHub.
+2. Open the [Caffeine Quest template](https://github.com/Merced-College/cpsc39-advSorting-StarbucksData).
+3. Click **Use this template → Create a new repository**.
+4. Select your own GitHub account as the owner.
+5. Name your repository **cpsc39-Starbucks-YourLastName**.
+6. Click **Create repository**.
+7. In **your new repository**, click **Code → HTTPS** and copy the URL.
 
-## Troubleshooting
+Make sure you copy the URL for your own repository. Your changes will be committed and pushed there.
 
-- **File not found:** Run > Run Configurations > Java Application > select the
-  affected application > Arguments > Working directory > Other > Workspace >
-  choose **CaffeineQuestStudent**. Do this for CaffeineQuest, SortCheck, and the
-  preview server if needed.
-- **Red server imports:** This project includes `src/module-info.java` with
-  `requires jdk.httpserver;`. Keep it. Make sure Eclipse uses a full JDK 11+.
-- **Port 8080 already in use:** Stop the old preview server with the Console's
-  red square before starting this one. The server intentionally keeps running.
-- **Map shows 404:** Generate the matching Demo or Student map first, then refresh.
-- **Map tiles blocked:** Use the localhost address. If still blocked, tell your
-  instructor; browser/network restrictions can also affect external map requests.
-- **Old results:** Each search overwrites that mode's map. Refresh the browser
-  after a new search. Save copies/screenshots for evidence when you change inputs.
-- **No output folder visible in Eclipse:** Right-click the project > Refresh.
+## 2. Clone your repository into Eclipse
 
-## Files
+1. In Eclipse, choose **File → Import**.
+2. Expand **Git**, select **Projects from Git**, and click **Next**.
+3. Select **Clone URI → Next**.
+4. Paste your repository’s URL into **URI**. Eclipse should fill in the host and repository path.
+5. Complete authentication if prompted, then click **Next**.
+6. Select the **main** branch and click **Next**.
+7. Keep the suggested local directory, or choose a folder outside your Eclipse workspace. Leave the remote name as **origin**.
+8. Click **Next**.
+9. Select **Import existing Eclipse projects**, then click **Next**.
+10. Select **CaffeineQuestStudent** and click **Finish**.
 
-| File | Role | Your work |
-|---|---|---|
-| MergeSort.java | Recursive sort with unfinished merge | Complete TODO A-D |
-| CaffeineQuest.java | Console menu, filtering, mode selection | Possible customization |
-| StoreDistance.java | Distance calculation and comparator | Research / possible customization |
-| StarbucksStore.java | Store data model | Supplied |
-| CsvLoader.java | Reads the supplied CSV | Supplied / research option |
-| MapExporter.java | Embeds ranked data in HTML | Supplied / research option |
-| MapPreviewServer.java | Serves map pages locally | Supplied / research option |
-| SortCheck.java | Correctness checks with built-in sort oracle | Run; keep unchanged |
-| resources/map-template.html | Map and ranked cards | Supplied / research option |
-| REFLECTION-TEMPLATE.md | Planning and submission prompts | Complete |
+The project should appear in Package Explorer. Use **JDK 11 or newer**.
 
-Data is a course snapshot, not a live store directory. Distances are straight-line
-miles, not driving routes. Default coordinates are approximately central Merced,
-not verified Merced College coordinates. Unfiltered data has 2,558 records;
-the drive-through filter matches 577. Map tiles are loaded only as normally viewed;
-do not add bulk downloads or remove attribution.
+## 3. Run Demo mode
 
-Technical references for supplied map infrastructure:
-https://leafletjs.com/examples/quick-start/
-https://operations.osmfoundation.org/policies/tiles/
+1. Expand **CaffeineQuestStudent → src → caffeinequest**.
+2. Right-click **CaffeineQuest.java → Run As → Java Application**.
+3. Click inside the Console.
+4. Press **Enter** to select **1 — Demo mode**.
+5. Press **Enter** at the remaining prompts to use the default search and finish.
+
+Demo mode uses Java’s built-in sort, so it works before you complete the assignment.
+
+## 4. View the Demo map
+
+1. Right-click **MapPreviewServer.java → Run As → Java Application**.
+2. Keep this application running.
+3. Open **http://localhost:8080/demo-map.html** in your browser.
+
+If port 8080 is already in use, stop your previous preview server before starting another.
+
+## 5. Complete the assignment
+
+Read **ASSIGNMENT.md** and complete your responses in **REFLECTION-TEMPLATE.md**.
+
+Complete **TODO A–D in MergeSort.java**, then run **SortCheck.java**.
+
+After completing your merge sort:
+
+1. Run **CaffeineQuest.java** again.
+2. Choose **2 — Student mode**.
+3. Enter your search settings.
+4. Open **http://localhost:8080/student-map.html**.
+
+Keep the preview server running while viewing either map. Refresh the browser after generating new results.
+
+## 6. Save your progress to GitHub
+
+1. Save your files.
+2. Right-click the project → **Team → Commit**.
+3. Stage your changed source files and reflection.
+4. Enter a meaningful commit message describing your changes.
+5. Click **Commit and Push**.
+6. Check your GitHub repository to confirm your changes appear.
+
+Commit as you make progress. Follow the Canvas assignment instructions for your final submission.
